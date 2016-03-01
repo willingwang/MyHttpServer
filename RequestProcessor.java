@@ -85,7 +85,7 @@ public class RequestProcessor implements Runnable {
                 StringTokenizer st=new StringTokenizer(get);  
                 String method=st.nextToken();  
                 String version="";  
-                if (method=="GET") {  
+                if ("GET".equals(method)) {  
                     fileName=st.nextToken();  
                     if (fileName.endsWith("/")) {  
                         fileName+=indexFileName;  
